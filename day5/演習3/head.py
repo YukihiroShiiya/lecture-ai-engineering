@@ -6,10 +6,7 @@ owner = "YukihiroShiiya"
 repo = "lecture-ai-engineering"
 
 url = f"https://api.github.com/repos/{owner}/{repo}/branches"
-headers = {
-    "Authorization": f"token {token}",
-    "Accept": "application/vnd.github+json"
-}
+headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github+json"}
 
 response = requests.get(url, headers=headers)
 

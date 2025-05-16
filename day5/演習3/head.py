@@ -1,8 +1,7 @@
 import requests
 import os
 
-#トークンをここに貼り付け（セキュアに管理してください）
-token = os.environ["github_token"] 
+token = os.environ.get("github_token")
 owner = "YukihiroShiiya"
 repo = "lecture-ai-engineering"
 

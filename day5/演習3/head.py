@@ -1,7 +1,8 @@
 import requests
+import os
 
-# GitHubトークンをここに貼り付け（セキュアに管理してください）
-token = "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"  # ご自身のPATに置き換えてください
+#トークンをここに貼り付け（セキュアに管理してください）
+token = os.environ["github_token"] 
 owner = "YukihiroShiiya"
 repo = "lecture-ai-engineering"
 

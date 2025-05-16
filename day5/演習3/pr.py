@@ -1,7 +1,8 @@
 import requests
+import os
 
-# --- GitHub 認証情報 ---
-token = "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"  # ご自身のPATに置き換えてください
+#  認証情報 ---
+token = os.environ["github_token"]  # ご自身のPATに置き換えてください
 owner = "YukihiroShiiya"
 repo = "lecture-ai-engineering"
 
@@ -11,7 +12,7 @@ base_branch = "master"                 # マージ先（通常は main や devel
 title = "✨ 新機能の追加"
 body = "このPRでは新機能を追加しました。レビューをお願いします。"
 
-# --- GitHub API呼び出し ---
+# ---b API呼び出し ---
 url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
 headers = {
     "Authorization": f"token {token}",

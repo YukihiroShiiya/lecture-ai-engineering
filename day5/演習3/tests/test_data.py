@@ -75,11 +75,13 @@ def test_missing_values_acceptable(sample_data):
             missing_rate < 0.8
         ), f"カラム '{col}' の欠損率が80%を超えています: {missing_rate:.2%}"
 
+
 def test_unique_passenger_id(sample_data):
     """PassengerIdが一意であることを確認"""
     if "PassengerId" in sample_data.columns:
         assert sample_data["PassengerId"].is_unique, "PassengerIdに重複があります"
-        
+
+
 def test_value_ranges(sample_data):
     """値の範囲を検証"""
     context = gx.get_context()
